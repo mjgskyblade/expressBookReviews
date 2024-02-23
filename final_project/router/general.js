@@ -26,6 +26,23 @@ public_users.post("/register", (req,res) => {
 public_users.get('/',function (req, res) {
   //Write your code here
   res.json(books);});
+  /*const getAllBooks = async () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(books); 
+        }, 1000); 
+    });
+};
+
+public_users.get('/', async (req, res) => {
+    try {
+        
+        const allBooks = await getAllBooks();
+        res.json(allBooks);
+    } catch (error) {
+        res.status(500).json({ message: "Error retrieving books" });
+    }
+});*/
 
 // Get book details based on ISBN
 public_users.get('/isbn/:isbn',function (req, res) {
